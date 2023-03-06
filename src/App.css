@@ -1,3 +1,9 @@
+:root {
+  --cardWidth: 240px;
+  --cardHeight: 280px;
+  --cardMargin: 16px;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -42,10 +48,18 @@ html body{
 
 
 .main{
+  flex-wrap: wrap;
   flex:1;
   height: 2rem;
   width: 100vw;
   display: flex;
   flex-direction: column;
+  background-color: #131212;
+}
+
+#card {
   background-color: #282c34;
+  width: var(--cardWidth);
+  height: var(--cardHeight);
+  margin: var(--cardMargin);
 }

@@ -14,7 +14,15 @@ function App() {
   const [genreTags, setGenreTags] = useState([]);
 
   function populate(genreTagParam) {
-    console.log(genreTagParam);
+    if (genreTags.includes(genreTagParam)){
+      const copyGenreTags = genreTags;
+      copyGenreTags.splice(copyGenreTags.indexOf(genreTagParam), 1);
+      console.log(copyGenreTags);
+      setGenreTags([...copyGenreTags])
+  }
+    else {
+      setGenreTags([...genreTags, genreTagParam])
+    }
   }
 
 
