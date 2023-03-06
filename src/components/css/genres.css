@@ -1,0 +1,16 @@
+.genreSelectors {
+  display: flex;
+  gap: 15px;
+  background-color: blue;
+  justify-content: center;
+  padding:7px 0px;
+  height: 2rem;
+  width: 100vw;
+}
+
+#btns {
+  padding: 3px 5px;
+  border-radius: 1rem;
+  background-color: aquamarine;
+  width: 1fr;
+}
