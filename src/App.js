@@ -5,10 +5,6 @@ import FillCards from './components/fillCards';
 import { useState } from 'react';
 
 
-
-
-
-
 function App() {
   const dataJson = require('./components/jsonData/Games.json');
   const [genreTags, setGenreTags] = useState([]);
@@ -17,7 +13,7 @@ function App() {
     if (genreTags.includes(genreTagParam)){
       const copyGenreTags = genreTags;
       copyGenreTags.splice(copyGenreTags.indexOf(genreTagParam), 1);
-      console.log(copyGenreTags);
+      // console.log(copyGenreTags);
       setGenreTags([...copyGenreTags])
   }
     else {

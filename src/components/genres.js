@@ -11,9 +11,9 @@ export default function Genres(props){
   }
 
   return (<div className="genreSelectors">
-    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("MMO") ? negativeColour : selectedColour}}>MMO</button>
-    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("FPS") ? negativeColour : selectedColour}}>FPS</button>
-    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("RPG") ? negativeColour : selectedColour}}>RPG</button>
-    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("YES") ? negativeColour : selectedColour}}>YES</button>
+    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("MMO") ? selectedColour : negativeColour}}>MMO</button>
+    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("FPS") ? selectedColour : negativeColour}}>FPS</button>
+    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("RPG") ? selectedColour : negativeColour}}>RPG</button>
+    <button id="btns" onClick={buttonPressed} style={{background: props.genreTags.includes("YES") ? selectedColour : negativeColour}}>YES</button>
   </div>)
 }
