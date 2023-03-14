@@ -65,3 +65,14 @@ html body{
   height: var(--cardHeight);
   margin: var(--cardMargin);
 }
+
+.SearchField {
+  background-color: #131212;
+  padding:3px;
+}
+
+.SearchField input {
+  border-radius: 0.2rem;
+  text-align: center;
+  background-color: rgb(36, 37, 37);
+}

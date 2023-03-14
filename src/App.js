@@ -2,12 +2,20 @@
 import './App.css';
 import Genres from './components/genres';
 import FillCards from './components/fillCards';
+import SearchField from './components/searchField';
 import { useState } from 'react';
+
 
 
 function App() {
   const dataJson = require('./components/jsonData/Games.json');
   const [genreTags, setGenreTags] = useState([]);
+  const [searchField, setSearchField] = useState("");
+
+  function updateSearch (searchFieldParam) {
+    setSearchField(searchFieldParam.target.value);
+    
+  }
 
   function populate(genreTagParam) {
     if (genreTags.includes(genreTagParam)){
@@ -28,9 +36,11 @@ function App() {
         Upcoming games!
       </header>
       <Genres populateFunction={populate} genreTags={genreTags}></Genres>
+      <SearchField updateSearch={updateSearch} searchField={searchField}></SearchField>
       <div className="main">
-      <FillCards genreTags={genreTags} dataJson={dataJson}></FillCards>        
+      <FillCards genreTags={genreTags} dataJson={dataJson} searchField={searchField}></FillCards>        
       </div>
+      
     </div>
   );
 }
