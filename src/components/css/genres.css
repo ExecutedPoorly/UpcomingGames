@@ -1,16 +1,21 @@
 .genreSelectors {
   display: flex;
-  gap: 15px;
-  background-color: #424040;
+  gap: 1px;
+  background-color: #000000;
   justify-content: center;
-  padding:7px 0px;
-  height: 2rem;
-  width: 100vw;
+  padding: 7px 0px;
+  height: 3rem;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  max-width: 100%;
+
 }
 
 #btns {
   padding: 3px 5px;
-  border-radius: 1rem;
-  background-color: aquamarine;
-  width: 1fr;
+  width: clamp(1rem, 5rem, 100px);
+  font-weight: bold;
+  color: white;
 }

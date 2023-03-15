@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Upcoming games!
+        Upcoming Games
       </header>
       <Genres populateFunction={populate} genreTags={genreTags}></Genres>
       <SearchField updateSearch={updateSearch} searchField={searchField}></SearchField>
