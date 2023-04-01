@@ -1,7 +1,6 @@
 import './css/fillcards.css';
 import steamImage from '../images/Steam_icon.svg';
 import twitterImage from '../images/TwitterSvg.svg';
-import { useId } from 'react';
 
 const FillCardsFunc = (props) => {
   let item = props.currentItem;
@@ -13,12 +12,11 @@ const FillCardsFunc = (props) => {
     <h2>Release date: {item.releaseDate}</h2>
     <a href={item.website}>Website</a>
     <img src={item.imageLink} id="cardimg"></img>
-    {console.log(item.releaseDate, item.releaseDate !=="TBA")}
     <div className='socials'>
     {item.websiteSteam !== "" ? <a href={item.websiteSteam}><img src={steamImage}></img></a> : <p> </p>}
     {item.twitter !== "" ? <a href={item.twitter}><img src={twitterImage}></img></a> : <p> </p>}
     </div>
-    {(item.releaseDate == "TBA" || item.releaseDate == "") ? <p> Invalid date </p> : <p>Countdown Placeholder</p>}
+    {(item.releaseDate === "TBA" || item.releaseDate === "") ? <p> Invalid date </p> : <p>Countdown Placeholder</p>}
     {/* <p>Genres</p> */}
     <p id="genreTags">{item.tags}</p>
   </div>
@@ -26,7 +24,14 @@ const FillCardsFunc = (props) => {
   )
 }
 
+const editCardInfo = (index) => {
+  
+}
+
 export default function FillCards(props) {
+
+
+
   if (props.searchField !== "") {
     return (
       <>

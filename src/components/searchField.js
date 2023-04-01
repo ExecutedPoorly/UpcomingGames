@@ -1,8 +1,4 @@
 export default function SearchField (props) {
-
-
-
-
   return (
   <div className='SearchField'>
 

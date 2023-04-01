@@ -71,6 +71,20 @@ html body{
   margin: var(--cardMargin);
 }
 
+.Bottomheaderbar {
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box; /* adjusts for padding with width*/
+  width: 100%;
+}
+
+.Bottomheaderbar button {
+  padding:3px;
+  color: white;
+}
+
 .SearchField {
   background-color: #131212;
   padding:3px;
@@ -81,3 +95,4 @@ html body{
   text-align: center;
   background-color: rgb(36, 37, 37);
 }
+
