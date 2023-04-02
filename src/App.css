@@ -80,9 +80,18 @@ html body{
   width: 100%;
 }
 
-.Bottomheaderbar button {
+.HeaderLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.HeaderLeft button {
   padding: 3px;
   color: white;
+}
+
+#clearStorage {
+  /* color:red; */
 }
 
 .SearchField {
@@ -95,4 +104,27 @@ html body{
   text-align: center;
   background-color: rgb(36, 37, 37);
 }
+.BlueBtn {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 3px 5px;
+}
 
+.BlueBtn:hover {
+  color:aquamarine;
+  outline:aquamarine solid 1px;
+  
+}
+#clearStorage {
+  color: #ffffff;
+  background: #0a0a0a;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding: 3px 5px;
+
+}
+#clearStorage:hover {
+  color: red;
+  outline:red solid 1px;
+}
