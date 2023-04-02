@@ -6,8 +6,10 @@ const FillCardsFunc = (props) => {
   let item = props.currentItem;
   let index = props.currentIndex;
   let dataJson = props.dataJson;
+  console.log(props.propsList.customGames,"aaash");
   return (
     <div id="card">
+      {props.propsList.customGames === true? <p>edit btn goes here weee</p> : null}
     <h1>{item.name}</h1>
     <h2>Release date: {item.releaseDate}</h2>
     <a href={item.website}>Website</a>
@@ -29,16 +31,13 @@ const editCardInfo = (index) => {
 }
 
 export default function FillCards(props) {
-
-
-
   if (props.searchField !== "") {
     return (
       <>
         {props.dataJson.map((item, index) => {
           // console.log(props)          
             if (item.name.toLowerCase().includes(props.searchField.toLowerCase())) {
-              return (<FillCardsFunc key={index} currentItem={item} currentIndex={index} dataJson={props.dataJson}></FillCardsFunc>)
+              return (<FillCardsFunc key={index} propsList={props} currentItem={item} currentIndex={index} dataJson={props.dataJson}></FillCardsFunc>)
             }  
         })}
       </>
@@ -51,7 +50,7 @@ export default function FillCards(props) {
         const genreArray = item.tags.split(' ');
         for (let i=0; i < genreArray.length; i++){
           if (props.genreTags.includes(genreArray[i])) {
-            return (<FillCardsFunc key = {index} currentItem={item} currentIndex={index}></FillCardsFunc>);
+            return (<FillCardsFunc key = {index} propsList={props} currentItem={item} currentIndex={index}></FillCardsFunc>);
           }
         }
 			})}

@@ -2,7 +2,7 @@ import "./App.css";
 import Genres from "./components/genres";
 import FillCards from "./components/fillCards";
 import SearchField from "./components/searchField";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
 	const dataJson = require("./components/jsonData/Games.json");
@@ -12,15 +12,20 @@ function App() {
 	const negativeColour = '#0a0a0a';
   const selectedColour = '#00ced1';
 
-	if (localStorage.getItem('customGames') !== null) {
-		console.log("using custom games");
-	}
+	// if (localStorage.getItem('customGames') !== null) {
+	// 	console.log("using custom games");
+	// }
 
-	function switchCustomGames() {
-		console.log("ddd");
-		customGames === true ? setCustomGames(false) : setCustomGames(true);
-		console.log(customGames);
+	function  switchCustomGames() {
+		customGames == false ? setCustomGames(true) : setCustomGames(false);
+
 	}
+	useEffect(() => {
+		if (customGames === true && localStorage.getItem('customGames') === null) {
+			localStorage.setItem("customGames", JSON.stringify(dataJson));
+			
+		}
+  }, [customGames]);
 
 	function updateSearch(searchFieldParam) {
 		setSearchField(searchFieldParam.target.value);
@@ -50,9 +55,10 @@ function App() {
 			</div>
 
 			<div className="main">
-				<FillCards		
+				<FillCards
+					customGames={customGames}		
 					genreTags={genreTags}
-					dataJson={dataJson}
+					dataJson={customGames === false ? dataJson : JSON.parse(localStorage.getItem("customGames"))}
 					searchField={searchField}
 				></FillCards>
 			</div>
