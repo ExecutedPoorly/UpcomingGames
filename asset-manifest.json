@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/UpcomingGames/static/css/main.083a1875.css",
-    "main.js": "/UpcomingGames/static/js/main.617ff172.js",
+    "main.css": "/UpcomingGames/static/css/main.744c9ccf.css",
+    "main.js": "/UpcomingGames/static/js/main.441eb7ba.js",
     "static/js/787.fb0728a3.chunk.js": "/UpcomingGames/static/js/787.fb0728a3.chunk.js",
     "static/media/Steam_icon.svg": "/UpcomingGames/static/media/Steam_icon.e715b67e134e835ca5983667aed34fce.svg",
     "static/media/TwitterSvg.svg": "/UpcomingGames/static/media/TwitterSvg.06ff10e19517c79d278d1d705524d71c.svg",
     "index.html": "/UpcomingGames/index.html",
-    "main.083a1875.css.map": "/UpcomingGames/static/css/main.083a1875.css.map",
-    "main.617ff172.js.map": "/UpcomingGames/static/js/main.617ff172.js.map",
+    "main.744c9ccf.css.map": "/UpcomingGames/static/css/main.744c9ccf.css.map",
+    "main.441eb7ba.js.map": "/UpcomingGames/static/js/main.441eb7ba.js.map",
     "787.fb0728a3.chunk.js.map": "/UpcomingGames/static/js/787.fb0728a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.083a1875.css",
-    "static/js/main.617ff172.js"
+    "static/css/main.744c9ccf.css",
+    "static/js/main.441eb7ba.js"
   ]
 }
