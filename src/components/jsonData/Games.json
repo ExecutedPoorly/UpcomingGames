@@ -5,7 +5,8 @@
   "websiteSteam" : "https://store.steampowered.com/app/1995520/Pax_Dei/",
   "twitter" : "https://twitter.com/PlayPaxDei/",
   "tags" : "MMO RPG",
-  "imageLink" : ""
+  "imageLink" : "",
+  "edit" : false
 },
 {
   "name" : "Throne and Liberty",
@@ -14,7 +15,8 @@
   "websiteSteam" : "",
   "twitter" : "https://twitter.com/Throne_Liberty",
   "tags" : "MMO RPG",
-  "imageLink" : ""
+  "imageLink" : "",
+  "edit" : false
 },
 {
   "name" : "Quinfall",
@@ -23,7 +25,8 @@
   "websiteSteam" : "https://store.steampowered.com/app/2294660/The_Quinfall/",
   "twitter" : "https://twitter.com/quinfall",
   "tags" : "MMO RPG",
-  "imageLink" : ""
+  "imageLink" : "",
+  "edit" : false
 },
 {
   "name" : "Ark 2",
@@ -32,7 +35,8 @@
   "websiteSteam" : "https://store.steampowered.com/app/2050420/ARK_2/",
   "twitter" : "https://twitter.com/ARK2News",
   "tags" : "RPG",
-  "imageLink" : ""
+  "imageLink" : "",
+  "edit" : false
 },
 {
   "name" : "Dune Awakening",
@@ -41,7 +45,8 @@
   "websiteSteam" : "https://store.steampowered.com/app/1172710/Dune_Awakening/",
   "twitter" : "https://twitter.com/DuneAwakening",
   "tags" : "FPS MMO",
-  "imageLink" : ""
+  "imageLink" : "",
+  "edit" : false
 },
 {
   "name" : "Ashes of Creation",
@@ -50,7 +55,8 @@
   "websiteSteam" : "",
   "twitter" : "https://twitter.com/ashesofcreation",
   "tags" : "MMO RPG",
-  "imageLink" : "https://pbs.twimg.com/profile_images/1164265296514801664/9gALDjLL_400x400.png"
+  "imageLink" : "https://pbs.twimg.com/profile_images/1164265296514801664/9gALDjLL_400x400.png",
+  "edit" : false
 }
 
 ]

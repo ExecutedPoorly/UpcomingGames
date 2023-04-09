@@ -11,14 +11,44 @@ function App() {
 	const [searchField, setSearchField] = useState("");
 	const [customGames, setCustomGames] = useState(false);
 	const [renderDialogue, setRenderDialogue] = useState(false);
+	const [renderForm, setRenderForm] = useState(false);
+	const [updateLocalStorage, setUpdateLocalStorage] = useState(true);
 	const negativeColour = '#0a0a0a';
   const selectedColour = '#00ced1';
-	
+	function fnUpdateLocalStorage() {
+		updateLocalStorage === true ? setUpdateLocalStorage(false) : setUpdateLocalStorage(true);
+	}
+
+	function editIndividualCard(params, ...args) {
+		console.log(params, "Wee", args);
+		if (args.length < 1) {
+			let jsonToChange = getJsonData();
+			console.log(jsonToChange[params].edit === false, "test")
+			jsonToChange[params].edit === false ? jsonToChange[params].edit = true : jsonToChange[params].edit = false;
+			localStorage.setItem("customGames", JSON.stringify(jsonToChange));
+			fnUpdateLocalStorage();
+
+	}
+		else {
+			let jsonToChange = getJsonData();
+			jsonToChange[params] = {...jsonToChange[params], ...(args[0])};
+			localStorage.setItem("customGames", JSON.stringify(jsonToChange));
+			jsonToChange[params].edit === false ? jsonToChange[params].edit = true : jsonToChange[params].edit = false;
+			fnUpdateLocalStorage();
+		}
+
+	}
 	
 	if (localStorage.getItem('customGames') === null) {
 		localStorage.setItem("customGames", JSON.stringify(dataJson));
 	}
+
+	function switchRenderForm() {
+		renderForm === false ? setRenderForm(true) : setRenderForm(false);
+	}
+
 	function clearData() {
+		localStorage.setItem("backupCustomGames", JSON.stringify(getJsonData()));
 		localStorage.setItem("customGames", JSON.stringify(dataJson));
 		confirmClear();
 	}
@@ -29,7 +59,7 @@ function App() {
 		return localStorageJson;
 	}}
 
-	function  switchCustomGames() {
+	function switchCustomGames() {
 		customGames == false ? setCustomGames(true) : setCustomGames(false);
 	}
 
@@ -69,10 +99,14 @@ function App() {
 			<div className="main">
 				{renderDialogue === true ? <PopUpBox title="Confirm reset of your saved games?" text="WARNING: This will irreversibly reset any changes you have made!" confirmOption={clearData} declineOption={confirmClear}></PopUpBox> : null}
 				<FillCards
+	
+					renderFormStatus={renderForm}
+					setRenderForm={switchRenderForm}
 					customGames={customGames}		
 					genreTags={genreTags}
 					dataJson={customGames === false ? dataJson : getJsonData()}
 					searchField={searchField}
+					changeData={editIndividualCard}
 				></FillCards>
 			</div>
 		</div>

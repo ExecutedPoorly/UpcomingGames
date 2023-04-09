@@ -1,15 +1,23 @@
 import './css/fillcards.css';
 import steamImage from '../images/Steam_icon.svg';
 import twitterImage from '../images/TwitterSvg.svg';
+import { EditCards } from './EditCards';
+
+
 
 const FillCardsFunc = (props) => {
   let item = props.currentItem;
   let index = props.currentIndex;
-  let dataJson = props.dataJson;
-  console.log(props.propsList.customGames,"aaash");
-  return (
-    <div id="card">
-      {props.propsList.customGames === true? <p>edit btn goes here weee</p> : null}
+  if (props.propsList.customGames === true) { //renders edit form
+    return (  
+      <EditCards key={index} propsList={props} currentItem={item} currentIndex={index} dataJson={props.dataJson} editStatusProp={item.edit}></EditCards>
+    )
+  }
+
+  else {
+  return (   //renders cards from local storage or json.
+    
+    <div id="card" key={props.currentIndex}>
     <h1>{item.name}</h1>
     <h2>Release date: {item.releaseDate}</h2>
     <a href={item.website}>Website</a>
@@ -23,22 +31,24 @@ const FillCardsFunc = (props) => {
     <p id="genreTags">{item.tags}</p>
   </div>
 
-  )
+  )}
 }
 
-const editCardInfo = (index) => {
+// const editCardInfo = (index) => {
   
-}
+// }
 
 export default function FillCards(props) {
+
   if (props.searchField !== "") {
     return (
       <>
         {props.dataJson.map((item, index) => {
           // console.log(props)          
             if (item.name.toLowerCase().includes(props.searchField.toLowerCase())) {
-              return (<FillCardsFunc key={index} propsList={props} currentItem={item} currentIndex={index} dataJson={props.dataJson}></FillCardsFunc>)
-            }  
+              return (<FillCardsFunc key={index} propsList={props} currentItem={item} currentIndex={index} dataJson={props.dataJson} editStatusProp={item.edit}></FillCardsFunc>)
+            }
+            else {return null}  
         })}
       </>
   )}
@@ -50,9 +60,11 @@ export default function FillCards(props) {
         const genreArray = item.tags.split(' ');
         for (let i=0; i < genreArray.length; i++){
           if (props.genreTags.includes(genreArray[i])) {
-            return (<FillCardsFunc key = {index} propsList={props} currentItem={item} currentIndex={index}></FillCardsFunc>);
+            return (<FillCardsFunc key={index} propsList={props} currentItem={item} currentIndex={index} editStatusProp={item.edit} ></FillCardsFunc>);
           }
+          
         }
+        return null;
 			})}
 		</>
 )}}//;style={{backgroundImage : `url(${item.imageLink})`
