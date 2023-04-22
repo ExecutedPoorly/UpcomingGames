@@ -10,7 +10,6 @@
   justify-content: flex-end;
   box-sizing: border-box;
   max-width: 100%;
-
 }
 
 #btns {
@@ -20,7 +19,7 @@
   color: white;
 }
 
-#btns:hover{
-  color:aquamarine;
-  border:aquamarine solid 1px;
+#btns:hover {
+  color: aquamarine;
+  border: aquamarine solid 1px;
 }

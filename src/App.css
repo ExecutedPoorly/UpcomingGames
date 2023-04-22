@@ -4,30 +4,31 @@
   --cardMargin: 16px;
 }
 
-*, body, html {
+*,
+body,
+html {
   padding: 0px;
   margin: 0px;
   border: 0px;
   font: inherit;
   vertical-align: baseline;
   text-align: center;
+  font-family: 'Arial Black', Gadget, sans-serif;
 }
 
 .App {
   text-align: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
   display: flex;
   align-items: flex-end;
   box-sizing: border-box;
-
 }
 
-html body{
+html body {
   background-color: black;
 }
-
 
 .App-header {
   background-color: #000000;
@@ -38,9 +39,9 @@ html body{
   /* font-size: calc(10px + 2vmin); */
   color: white;
   /* text-shadow: 1px 1px 3px #535657; */
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: 'Arial Black', Gadget, sans-serif;
   font-weight: 700;
-  padding-right:2px;
+  padding-right: 2px;
 }
 
 /* @keyframes App-logo-spin {
@@ -52,10 +53,10 @@ html body{
   }
 } */
 
-.main{
+.main {
   padding: 16px;
   flex-wrap: wrap;
-  flex:1;
+  flex: 1;
   height: 2rem;
   width: 100vw;
   display: flex;
@@ -97,7 +98,7 @@ html body{
 
 .SearchField {
   background-color: #131212;
-  padding:3px;
+  padding: 3px;
 }
 
 .SearchField input {
@@ -113,9 +114,8 @@ html body{
 }
 
 .BlueBtn:hover {
-  color:aquamarine;
-  outline:aquamarine solid 1px;
-  
+  color: aquamarine;
+  outline: aquamarine solid 1px;
 }
 #clearStorage {
   color: #ffffff;
@@ -123,9 +123,53 @@ html body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
   padding: 3px 5px;
-
 }
 #clearStorage:hover {
   color: red;
-  outline:red solid 1px;
+  outline: red solid 1px;
+}
+#addNewGame {
+  color: #ffffff;
+  background: #0a0a0a;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding: 3px 5px;
+}
+#addNewGame:hover {
+  color: rgb(114, 201, 150);
+  outline: rgb(54, 180, 75) solid 1px;
+}
+
+
+.AddGameBtn {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background: black;
+  padding: 5px
+  
+}
+
+.AddGameScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: clamp(130px, 40%, 400px);
+  height: clamp(80px, 40%, 200px); */
+  background-color: rgb(36, 37, 37);
+  color: white;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around;
+  font-family: 'Arial Black', Gadget, sans-serif;
+  width: fit-content;
+}
+.AddGameScreen .formSection {
+  display: flex;
+  flex-direction: column;
 }

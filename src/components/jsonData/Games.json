@@ -1,62 +1,62 @@
-[{
-  "name" : "Pax Dei",
-  "releaseDate"  : "TBA",
-  "website" : "https://playpaxdei.com/en-us",
-  "websiteSteam" : "https://store.steampowered.com/app/1995520/Pax_Dei/",
-  "twitter" : "https://twitter.com/PlayPaxDei/",
-  "tags" : "MMO RPG",
-  "imageLink" : "",
-  "edit" : false
-},
-{
-  "name" : "Throne and Liberty",
-  "releaseDate"  : "2023",
-  "website" : "https://tl.plaync.com/",
-  "websiteSteam" : "",
-  "twitter" : "https://twitter.com/Throne_Liberty",
-  "tags" : "MMO RPG",
-  "imageLink" : "",
-  "edit" : false
-},
-{
-  "name" : "Quinfall",
-  "releaseDate"  : "TBA",
-  "website" : "https://www.quinfall.com/",
-  "websiteSteam" : "https://store.steampowered.com/app/2294660/The_Quinfall/",
-  "twitter" : "https://twitter.com/quinfall",
-  "tags" : "MMO RPG",
-  "imageLink" : "",
-  "edit" : false
-},
-{
-  "name" : "Ark 2",
-  "releaseDate"  : "TBA",
-  "website" : "http://www.studiowildcard.com/",
-  "websiteSteam" : "https://store.steampowered.com/app/2050420/ARK_2/",
-  "twitter" : "https://twitter.com/ARK2News",
-  "tags" : "RPG",
-  "imageLink" : "",
-  "edit" : false
-},
-{
-  "name" : "Dune Awakening",
-  "releaseDate"  : "TBA",
-  "website" : "https://www.duneawakening.com/",
-  "websiteSteam" : "https://store.steampowered.com/app/1172710/Dune_Awakening/",
-  "twitter" : "https://twitter.com/DuneAwakening",
-  "tags" : "FPS MMO",
-  "imageLink" : "",
-  "edit" : false
-},
-{
-  "name" : "Ashes of Creation",
-  "releaseDate"  : "TBA",
-  "website" : "https://ashesofcreation.com/",
-  "websiteSteam" : "",
-  "twitter" : "https://twitter.com/ashesofcreation",
-  "tags" : "MMO RPG",
-  "imageLink" : "https://pbs.twimg.com/profile_images/1164265296514801664/9gALDjLL_400x400.png",
-  "edit" : false
-}
-
+[
+  {
+    "name": "Pax Dei",
+    "releaseDate": "TBA",
+    "website": "https://playpaxdei.com/en-us",
+    "websiteSteam": "https://store.steampowered.com/app/1995520/Pax_Dei/",
+    "twitter": "https://twitter.com/PlayPaxDei/",
+    "tags": "MMO RPG",
+    "imageLink": "",
+    "edit": false
+  },
+  {
+    "name": "Throne and Liberty",
+    "releaseDate": "2023",
+    "website": "https://tl.plaync.com/",
+    "websiteSteam": "",
+    "twitter": "https://twitter.com/Throne_Liberty",
+    "tags": "MMO RPG",
+    "imageLink": "",
+    "edit": false
+  },
+  {
+    "name": "Quinfall",
+    "releaseDate": "TBA",
+    "website": "https://www.quinfall.com/",
+    "websiteSteam": "https://store.steampowered.com/app/2294660/The_Quinfall/",
+    "twitter": "https://twitter.com/quinfall",
+    "tags": "MMO RPG",
+    "imageLink": "",
+    "edit": false
+  },
+  {
+    "name": "Ark 2",
+    "releaseDate": "TBA",
+    "website": "http://www.studiowildcard.com/",
+    "websiteSteam": "https://store.steampowered.com/app/2050420/ARK_2/",
+    "twitter": "https://twitter.com/ARK2News",
+    "tags": "RPG",
+    "imageLink": "",
+    "edit": false
+  },
+  {
+    "name": "Dune Awakening",
+    "releaseDate": "TBA",
+    "website": "https://www.duneawakening.com/",
+    "websiteSteam": "https://store.steampowered.com/app/1172710/Dune_Awakening/",
+    "twitter": "https://twitter.com/DuneAwakening",
+    "tags": "FPS MMO",
+    "imageLink": "",
+    "edit": false
+  },
+  {
+    "name": "Ashes of Creation",
+    "releaseDate": "TBA",
+    "website": "https://ashesofcreation.com/",
+    "websiteSteam": "",
+    "twitter": "https://twitter.com/ashesofcreation",
+    "tags": "MMO RPG",
+    "imageLink": "https://pbs.twimg.com/profile_images/1164265296514801664/9gALDjLL_400x400.png",
+    "edit": false
+  }
 ]

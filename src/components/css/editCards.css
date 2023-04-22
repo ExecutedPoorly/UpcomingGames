@@ -1,0 +1,18 @@
+#card.CardEdit {
+  font-size: 0.9rem;
+  margin: 0px;
+  padding: 0.5rem;
+  color: #24add6;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#card.CardEdit .formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -6,13 +6,13 @@
   /* width: clamp(130px, 40%, 400px);
   height: clamp(80px, 40%, 200px); */
   background-color: #040507;
-  color:white;
+  color: white;
   padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: space-around;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: 'Arial Black', Gadget, sans-serif;
   width: fit-content;
 }
 
@@ -40,7 +40,6 @@
 #confirm:hover {
   outline: rgb(255, 7, 7) 1px solid;
   background: red;
-
 }
 
 #deny {
@@ -49,5 +48,5 @@
 
 #deny:hover {
   outline: green 1px solid;
-  background: greenyellow;  
+  background: greenyellow;
 }
