@@ -5,7 +5,7 @@ import SearchField from './components/searchField'
 import { PopUpBox } from './components/popUpBox'
 import { useState, useEffect } from 'react'
 import { AddNewGame } from './components/addNewCard'
-import { useShowAddGameState } from './stateTest/StateTest.js'
+import { useShowAddGameState } from './stateTest/StateTest.jsx'
 
 function App() {
   const dataJson = require('./components/jsonData/Games.json')
@@ -43,7 +43,9 @@ function App() {
       fnUpdateLocalStorage() //
     }
   }
-  function addNewCard(...args) {
+  function addNewCard(e) {
+    e.preventDefault()
+    console.log(e.target)
     let jsonToChange = getJsonData()
     console.log(jsonToChange.length)
   }

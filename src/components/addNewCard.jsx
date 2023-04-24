@@ -3,13 +3,17 @@ import steamImage from '../images/Steam_icon.svg'
 import twitterImage from '../images/TwitterSvg.svg'
 import { EditCards } from './EditCards'
 export function AddNewGame({ showAddGame, switchAddGameShown, addNewCard }) {
-  console.log(addNewCard)
   if (showAddGame === true) {
     return (
       <div className="AddGameScreen">
-        <form className="formSection" onSubmit={addNewCard}>
+        <form
+          className="formSection"
+          onSubmit={(e) => {
+            addNewCard(e)
+          }}
+        >
           <label htmlFor="name">name:</label>
-          <input id="name"></input>
+          <input id="name" required></input>
           <label htmlFor="date">Release date: </label>
           <input type="date" id="date"></input>
           <label htmlFor="website">Website: </label>
