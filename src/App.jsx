@@ -6,6 +6,7 @@ import { PopUpBox } from './components/popUpBox'
 import { useState, useEffect } from 'react'
 import { AddNewGame } from './components/addNewCard'
 import { useShowAddGameState } from './stateTest/StateTest.jsx'
+import { createNewCard } from './modules/CardCreation'
 
 function App() {
   const dataJson = require('./components/jsonData/Games.json')
@@ -45,9 +46,10 @@ function App() {
   }
   function addNewCard(e) {
     e.preventDefault()
-    console.log(e.target)
+    const newObject = createNewCard(e)
     let jsonToChange = getJsonData()
-    console.log(jsonToChange.length)
+    jsonToChange.push(newObject)
+    console.log(jsonToChange)
   }
   if (localStorage.getItem('customGames') === null) {
     localStorage.setItem('customGames', JSON.stringify(dataJson))

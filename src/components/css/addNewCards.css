@@ -1,0 +1,52 @@
+/* .formSection #tags > *{
+  background: black;
+} */
+.react-select-container {
+  background: rgb(36, 37, 37);
+  color:rgb(252, 252, 252);
+}
+
+.react-select__control {
+  background: black !important;
+  color: black;
+  border-color: black !important;
+}
+
+.react-select__value-container {
+  background: black;
+  /* border-color: black !important; */
+}
+
+
+.react-select__input-container {
+  background: rgb(36, 37, 37);
+  border-color: black;
+  color:white;
+}
+
+.indicatorContainer {
+  background: black;
+}
+
+.react-select__indicator {
+  background: black;
+}
+
+.react-select__menu {
+  background: black !important;
+}
+
+
+.react-select__menu-list {
+  background: black !important;
+
+}
+.react-select__option {
+  background: black !important;
+
+}
+.react-select__option:hover {
+  background: black !important;
+  border: 1px solid blue;
+  color: blue;
+}
