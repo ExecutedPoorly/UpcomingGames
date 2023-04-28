@@ -52,6 +52,9 @@ export function AddNewGame({ showAddGame, switchAddGameShown, addNewCard }) {
             addNewCard(e)
           }}
         >
+          <button id="switchMe" onClick={switchAddGameShown}>
+            X
+          </button>
           <label htmlFor="name">name:</label>
           <input id="name" required></input>
           <label htmlFor="date">Release date: </label>

@@ -113,14 +113,18 @@ function App() {
           >
             RESET MY GAMES
           </button>
-          <button onClick={switchAddGameShown} id="addNewGame">
-            ADD NEW GAME +
-          </button>
+          {customGames ? (
+            <button onClick={switchAddGameShown} id="addNewGame">
+              ADD NEW GAME +
+            </button>
+          ) : null}
         </div>
-        <SearchField
-          updateSearch={updateSearch}
-          searchField={searchField}
-        ></SearchField>
+        {customGames ? (
+          <SearchField
+            updateSearch={updateSearch}
+            searchField={searchField}
+          ></SearchField>
+        ) : null}
       </div>
 
       <div className="main">

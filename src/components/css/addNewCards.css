@@ -2,14 +2,19 @@
   background: black;
 } */
 .react-select-container {
-  background: rgb(36, 37, 37);
-  color:rgb(252, 252, 252);
+  background: rgb(0, 0, 0) !important;
+  color: rgb(252, 252, 252);
 }
 
 .react-select__control {
+  border-radius: inherit !important;
   background: black !important;
-  color: black;
+  color: rgb(240, 240, 240) !important;
   border-color: black !important;
+}
+
+.react-select__indicator-separator {
+  background: black !important;
 }
 
 .react-select__value-container {
@@ -17,15 +22,14 @@
   /* border-color: black !important; */
 }
 
-
 .react-select__input-container {
   background: rgb(36, 37, 37);
   border-color: black;
-  color:white;
+  color: white;
 }
 
 .indicatorContainer {
-  background: black;
+  background: rgb(190, 169, 169);
 }
 
 .react-select__indicator {
@@ -36,17 +40,35 @@
   background: black !important;
 }
 
-
 .react-select__menu-list {
   background: black !important;
-
 }
 .react-select__option {
   background: black !important;
-
 }
 .react-select__option:hover {
   background: black !important;
-  border: 1px solid blue;
-  color: blue;
+  border: 1px solid rgb(0, 206, 209);
+  color: rgb(0, 206, 209);
+}
+
+.react-select__input {
+  color: white !important;
+}
+
+.react-select__multi-value {
+  background: rgb(0, 206, 209) !important;
+  color: white !important;
+}
+
+.react-select__multi-value__label {
+  color: white !important;
+}
+
+#switchMe {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
