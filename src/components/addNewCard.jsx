@@ -13,24 +13,6 @@ export function AddNewGame({ showAddGame, switchAddGameShown, addNewCard }) {
     { value: 'YES', label: 'YES' },
     { value: 'FPS', label: 'FPS' },
   ]
-  const customStyles = {
-    control: (provided, state) => ({
-      ...provided,
-      border: state.isFocused ? '2px solid blue' : '2px solid #ccc',
-      boxShadow: state.isFocused ? '0 0 3px #aaa' : 'none',
-      borderRadius: '10px',
-      '&:hover': {
-        border: state.isFocused ? '2px solid blue' : '2px solid #999',
-      },
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isFocused ? '#ddd' : 'white',
-      '&:hover': {
-        backgroundColor: '#ddd',
-      },
-    }),
-  }
   function handleTagsChange(selectedOptions) {
     setSelectedTags(selectedOptions)
   }
@@ -49,7 +31,9 @@ export function AddNewGame({ showAddGame, switchAddGameShown, addNewCard }) {
         <form
           className="formSection"
           onSubmit={(e) => {
-            addNewCard(e)
+            e.preventDefault()
+            console.log(selectedTags, 'test')
+            addNewCard(e, selectedTags)
           }}
         >
           <button id="switchMe" onClick={switchAddGameShown}>
@@ -69,16 +53,22 @@ export function AddNewGame({ showAddGame, switchAddGameShown, addNewCard }) {
           <input id="twitterInput"></input>
           <label htmlFor="tags">Tags: </label>
           <Select
-            styles={customStyles}
             options={options}
+            onChange={(selectedOptions) => {
+              handleTagsChange(selectedOptions)
+            }}
             isMulti
             id="tags"
             className="react-select-container"
             classNamePrefix="react-select"
+            required
           ></Select>
+
           <button type="submit">Save</button>
         </form>
       </div>
     )
   }
 }
+// create a new function named fish, that console.logs "wee"
+457
