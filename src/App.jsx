@@ -44,12 +44,13 @@ function App() {
       fnUpdateLocalStorage() //
     }
   }
-  function addNewCard(e) {
+  function addNewCard(e, target) {
     e.preventDefault()
-    const newObject = createNewCard(e)
+    const newObject = createNewCard(e, target)
+    console.log(newObject, 'Wee')
     let jsonToChange = getJsonData()
     jsonToChange.push(newObject)
-    console.log(jsonToChange)
+    localStorage.setItem('customGames', JSON.stringify(jsonToChange))
   }
   if (localStorage.getItem('customGames') === null) {
     localStorage.setItem('customGames', JSON.stringify(dataJson))
