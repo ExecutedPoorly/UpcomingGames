@@ -107,7 +107,7 @@ function EditCards(props) {
         {item.releaseDate === 'TBA' || item.releaseDate === '' ? (
           <p> Invalid date </p>
         ) : (
-          <p>Countdown Placeholder</p>
+          <p>{props.isCountdownReady ? props.countdown : null}</p>
         )}
         {/* <p>Genres</p> */}
         <p id="genreTags">{item.tags}</p>
